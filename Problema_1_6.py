@@ -31,9 +31,12 @@ class PyPanel():
                self.phi[1,0] * eta_0**2 + self.phi[1,1] * eta_0
 
     def T(self):
-        return 2 * self.eta / self.denom
+        return 2 * eta_0 / self.denom
 
     def R(self):
-        pass
+        num = self.phi[0,0] * eta_0 + self.phi[0,1] -\
+              self.phi[1,0] * eta_0**2 - self.phi[1,1] * eta_0 
+        return num / self.denom
+        
 
         
