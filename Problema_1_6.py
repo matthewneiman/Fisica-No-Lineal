@@ -8,7 +8,7 @@ class PyPanel():
 
     fIni = 1e3
     fEnd = 1000e9
-    N = 101
+    N = 1001
     omega = np.linspace(fIni,fEnd,N) * 2 * np.pi
 
     def __init__(self, epsilon_r = 1.0 , mu_r = 1.0, sigma = 0.0, d = 100e-6):
@@ -25,11 +25,8 @@ class PyPanel():
 
     def T(self):
         return 2 * self.eta / self.denom
-        
-panel1 = PyPanel(epsilon_r = 5.0, d = 100e-6)
-panel2 = PyPanel(epsilon_r = 5.0, d = 10e-3)
-panel3 = PyPanel()
-plt.plot(PyPanel.omega/2/np.pi,np.abs(panel1.T()))
-plt.plot(PyPanel.omega/2/np.pi,np.abs(panel2.T()))
 
-plt.show()
+    def R(self):
+        pass
+
+        
