@@ -14,6 +14,11 @@ class PyPanel():
         self.sigma = sigma
         self.d = d
         self.mu = mu_r * mu_0
+## Ver clase del 1 de abril... mejor tener epsilon en un metodo de las clase...
+## Porque un panel existe sin especificarle la frecuencia...
+## Imaginate que luego tienes una clase panel donde despues de iniciar, puedes cambiar el espesor...
+## Entonces tienes que recordar volver a calcular todo lo que depende del espesor
+## Pero si siempre calculas cantidades derivadas en el momento --- entonces no tienes ese problema..
         self.epsilon_c = -np.complex(0,1)*sigma/PyPanel.omega + \
                          epsilon_0 * epsilon_r
         self.eta = np.sqrt(self.mu / self.epsilon_c)
